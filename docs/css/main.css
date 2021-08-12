@@ -1,0 +1,31 @@
+.cubephotos
+{
+    width: 100%;
+    height: 100%;
+}
+
+h1
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photocard
+{
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+}
+
+.alg
+{
+    font-size: small;
+    padding: 5px;
+}
+
+section
+{
+    margin: 0 auto;
+    text-align: center;
+}
