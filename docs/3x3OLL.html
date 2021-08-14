@@ -12,54 +12,93 @@
 </head>
 <body>
 <main class="container">
-    <section id="podstawowe" class="align-items-center">
+    <section id="podstawowe">
         <h1>Podstawowe: </h1>
-        <div class="row align-items-center">
-            <div class="photocard">
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltH.png" download>
                     <img src="img/ksztaltH.png">
                 </a>
-                <div class="alg">**Kształt H: **(R U2 R') U' (R U R') U' (R U' R')<br>Generacja: sam siebie</div>
+                <div class="alg" id="ksztaltH">**Kształt H: **(R U2 R') U' (R U R') U' (R U' R')<br>Generacja: sam siebie</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltH')">Pobierz</button>
             </div>
-            <div class="photocard">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltPi.png" download>
                     <img src="img/ksztaltPi.png">
                 </a>
-                <div class="alg">**Kształt Pi: **R U2 R2' U' R2 U' R2' U2 R<br>Generacja: sam siebie</div>
+                <div class="alg" id="ksztaltPi">**Kształt Pi: **R U2 R2' U' R2 U' R2' U2 R<br>Generacja: sam siebie</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltPi')">Pobierz</button>
             </div>
-            <div class="photocard">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltSune.png" download>
                     <img src="img/ksztaltSune.png">
                 </a>
-                <div class="alg">**Kształt Sune: (R U R') U (R U2 R')<br>Generacja: (R U2 R') U' (R U' R')</div>
+                <div class="alg" id="ksztaltSune">**Kształt Sune: **(R U R') U (R U2 R')<br>Generacja: R U2 R' U' R U' R'</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltSune')">Pobierz</button>
             </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="photocard">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltAnti-Sune.png" download>
                     <img src="img/ksztaltAnti-Sune.png">
                 </a>
-                <div class="alg">Alg</div>
+                <div class="alg" id="ksztaltAntiSune">**Kształt Anti-Sune: **(R U2 R') U' (R U' R')<br>Generacja: R U R' U R U2 R'</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltAntiSune')">Pobierz</button>
             </div>
-            <div class="photocard">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltT.png" download>
                     <img src="img/ksztaltT.png">
                 </a>
-                <div class="alg">Alg</div>
+                <div class="alg" id="ksztaltT">**Kształt T: **(r U R' U') (r' F R F')<br>Generacja: F R' F' r U R U' r'</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltT')">Pobierz</button>
             </div>
-            <div class="photocard">
+            <div class="photocard col-lg-4 col-md-6 col-12">
                 <a href="img/ksztaltL.png" download>
                     <img src="img/ksztaltL.png">
                 </a>
-                <div class="alg">Alg</div>
+                <div class="alg" id="ksztaltL">**Kształt L: **(F R' F' r) (U R U' r')<br>Generacja: r U R' U' r' F R F'</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltL')">Pobierz</button>
             </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="photocard">
+            <div class="photocard col-12">
                 <a href="img/ksztaltU.png" download>
                     <img src="img/ksztaltU.png">
                 </a>
-                <div class="alg">Alg</div>
+                <div class="alg" id="ksztaltU">**Kształt U: **R2' D' (R U2 R') D R U2 R<br>Generacja: R' U2 R' D' R U2 R' D R2</div>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltU')">Pobierz</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="case-t">
+        <h1>Przypadki T: </h1>
+        <div class="row">
+            <div class="photocard col-md-6 col-12">
+                <a href="img/T1.png" download>
+                    <img src="img/T1.png">
+                </a>
+                <div class="alg">**T1: **F (R U R' U') F'<br>Generacja: F U R U' R' F'</div>
+            </div>
+            <div class="photocard col-md-6 col-12">
+                <a href="img/T2.png" download>
+                    <img src="img/T2.png">
+                </a>
+                <div class="alg">**T2: **(R U R' U') (R' F R F')<br>Generacja: F R' F' R U R U' R'</div>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="case-z">
+        <h1>Przypadki Z: </h1>
+        <div class="row">
+            <div class="photocard col-md-6 col-12">
+                <a href="img/Z1.png" download>
+                    <img src="img/Z1.png">
+                </a>
+                <div class="alg">**Z1: **R' (F R U R' U' F') U R<br>Generacja: R' U' F U R U' R' F' R</div>
+            </div>
+            <div class="photocard col-md-6 col-12">
+                <a href="img/Z2.png" download>
+                    <img src="img/Z2.png">
+                </a>
+                <div class="alg">**Z2: **(R U R') (F' U' F) U (R U2 R')<br>Generacja: R U2 R' U' F' U F R U' R'</div>
             </div>
         </div>
     </section>
