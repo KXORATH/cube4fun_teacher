@@ -43,7 +43,7 @@ section
 
 hr
 {
-    padding: 5px;
+    background-color: red;
 }
 
 button:hover
