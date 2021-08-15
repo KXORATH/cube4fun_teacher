@@ -3,14 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>cube4fun teacher site</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="js/main.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
+        </div>
+    </div>
+</nav>
 <main class="container">
     <section id="standard">
         <h1>Podstawowe: </h1>
@@ -20,49 +69,56 @@
                     <img src="img/ksztaltH.png">
                 </a>
                 <div class="alg" id="ksztaltH">**Kształt H: **(R U2 R') U' (R U R') U' (R U' R')<br>Generacja: sam siebie</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltH')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltH.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltH')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/ksztaltPi.png" download>
                     <img src="img/ksztaltPi.png">
                 </a>
                 <div class="alg" id="ksztaltPi">**Kształt Pi: **R U2 R2' U' R2 U' R2' U2 R<br>Generacja: sam siebie</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltPi')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltPi.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltPi')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/ksztaltSune.png" download>
                     <img src="img/ksztaltSune.png">
                 </a>
                 <div class="alg" id="ksztaltSune">**Kształt Sune: **(R U R') U (R U2 R')<br>Generacja: R U2 R' U' R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltSune')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltSune.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltSune')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/ksztaltAnti-Sune.png" download>
                     <img src="img/ksztaltAnti-Sune.png">
                 </a>
                 <div class="alg" id="ksztaltAntiSune">**Kształt Anti-Sune: **(R U2 R') U' (R U' R')<br>Generacja: R U R' U R U2 R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltAntiSune')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltAntiSune.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltAntiSune')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/ksztaltT.png" download>
                     <img src="img/ksztaltT.png">
                 </a>
                 <div class="alg" id="ksztaltT">**Kształt T: **(r U R' U') (r' F R F')<br>Generacja: F R' F' r U R U' r'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltT')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltT.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltT')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/ksztaltL.png" download>
                     <img src="img/ksztaltL.png">
                 </a>
                 <div class="alg" id="ksztaltL">**Kształt L: **(F R' F' r) (U R U' r')<br>Generacja: r U R' U' r' F R F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltL')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltL.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltL')">Kopiuj alga</button>
             </div>
             <div class="photocard col-12 mb-3">
                 <a href="img/ksztaltU.png" download>
                     <img src="img/ksztaltU.png">
                 </a>
                 <div class="alg" id="ksztaltU">**Kształt U: **R2' D' (R U2 R') D R U2 R<br>Generacja: R' U2 R' D' R U2 R' D R2</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltU')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/ksztaltU.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#ksztaltU')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -75,14 +131,16 @@
                     <img src="img/T1.png">
                 </a>
                 <div class="alg" id="T1">**T1: **F (R U R' U') F'<br>Generacja: F U R U' R' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#T1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/T1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#T1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/T2.png" download>
                     <img src="img/T2.png">
                 </a>
                 <div class="alg" id="T2">**T2: **(R U R' U') (R' F R F')<br>Generacja: F R' F' R U R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#T2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/T2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#T2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -95,14 +153,16 @@
                     <img src="img/Z1.png">
                 </a>
                 <div class="alg" id="Z1">**Z1: **R' (F R U R' U' F') U R<br>Generacja: R' U' F U R U' R' F' R</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Z1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Z1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Z1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/Z2.png" download>
                     <img src="img/Z2.png">
                 </a>
                 <div class="alg" id="Z2">**Z2: **(R U R') (F' U' F) U (R U2 R')<br>Generacja: R U2 R' U' F' U F R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Z2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Z2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Z2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -115,28 +175,32 @@
                     <img src="img/P1.png">
                 </a>
                 <div class="alg" id="P1">**P1: **F (U R U' R') F'<br>Generacja: F R U R' U' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#P1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/P1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#P1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/P2.png" download>
                     <img src="img/P2.png">
                 </a>
                 <div class="alg" id="P2">**P2: **F' (U' L' U L) F<br>Generacja: F' L' U' L U F</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#P2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/P2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#P2')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/P3.png" download>
                     <img src="img/P3.png">
                 </a>
                 <div class="alg" id="P3">**P3: **R' U' (F U R U' R' F') R<br>Generacja: R' F R U R' U' F' U R</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#P3')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/P3.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#P3')">Kopiuj alga</button>
             </div>
             <div class="photocard col-12 mb-3">
                 <a href="img/P4.png" download>
                     <img src="img/P4.png">
                 </a>
                 <div class="alg" id="P4">**P4: **(F' L F L') U' (L' U L) U (L' U L)<br>Generacja: L' U' L U' L' U' L U L F' L' F</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#P4')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/P4.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#P4')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -149,14 +213,16 @@
                     <img src="img/W1.png">
                 </a>
                 <div class="alg" id="W1">**W1: **(R U R') U (R U' R') U' (R' F R F')<br>Generacja: F R' F' R U R U R' U' R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#W1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/W1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#W1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/W2.png" download>
                     <img src="img/W2.png">
                 </a>
                 <div class="alg" id="W2">**W2: **(L' U' L) U' (L' U L) U (L F' L' F)<br>Generacja: F' L F L' U' L' U' L U L' U L</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#W2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/W2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#W2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -169,14 +235,16 @@
                     <img src="img/C1.png">
                 </a>
                 <div class="alg" id="C1">**C1: **R' U' (R' F R F') U R<br>Generacja: R' U' F R' F' R U R</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#C1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/C1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#C1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/C2.png" download>
                     <img src="img/C2.png">
                 </a>
                 <div class="alg" id="C2">**C2: **F (R U R' U') R' F' r U R U' r'<br>Generacja: r U R' U' r' F R U R U' R' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#C2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/C2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#C2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -189,14 +257,16 @@
                     <img src="img/Ryba1.png">
                 </a>
                 <div class="alg" id="Ryba1">**Ryba1: **(F R' F' R) (U R U' R')<br>Generacja: R U R' U' R' F R F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Ryba1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Ryba1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Ryba1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/Ryba2.png" download>
                     <img src="img/Ryba2.png">
                 </a>
                 <div class="alg" id="Ryba2">**Ryba2: **(R U2 R2') F R F' (R U2 R')<br>Generacja: R U2 R' F R' F' R2 U2 R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Ryba2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Ryba2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Ryba2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -209,14 +279,16 @@
                     <img src="img/Kwadrat1.png">
                 </a>
                 <div class="alg" id="Kwadrat1">**Kwadrat1: **r U2 R' U' R U' r'<br>Generacja: r U R' U R U2 r'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Kwadrat1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Kwadrat1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Kwadrat1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/Kwadrat2.png" download>
                     <img src="img/Kwadrat2.png">
                 </a>
                 <div class="alg" id="Kwadrat2">**Kwadrat2: **l' U2 L U L' U l<br>Generacja: l' U' L U' L' U2 l</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Kwadrat2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Kwadrat2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Kwadrat2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -229,28 +301,32 @@
                     <img src="img/Piorun1.png">
                 </a>
                 <div class="alg" id="Piorun1">**Piorun1: **r U R' U R U2 r'<br>Generacja: r U2 R' U' R U' r'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Piorun1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/Piorun2.png" download>
                     <img src="img/Piorun2.png">
                 </a>
                 <div class="alg" id="Piorun2">**Piorun2: **l' U' L U' L' U2 l<br>Generacja: l' U2 L U L' U l</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Piorun2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun2')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/Piorun3.png" download>
                     <img src="img/Piorun3.png">
                 </a>
                 <div class="alg" id="Piorun3">**Piorun3: **M (R U R' U R U2 R') U M'<br>Generacja: M U' R U2 R' U' R U' R' M'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun3')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Piorun3.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun3')">Kopiuj alga</button>
             </div>
             <div class="photocard col-12 mb-3">
                 <a href="img/Piorun4.png" download>
                     <img src="img/Piorun4.png">
                 </a>
                 <div class="alg" id="Piorun4">**Piorun4: **M' (R' U' R U' R' U2 R) U' M<br>Generacja: M' U R' U2 R U R' U R M</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun4')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Piorun4.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Piorun4')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -263,28 +339,32 @@
                     <img src="img/I1.png">
                 </a>
                 <div class="alg" id="I1">**I1: **F (U R U' R') (U R U' R') F'<br>Generacja: F R U R' U' R U R' U' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#I1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/I1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#I1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/I2.png" download>
                     <img src="img/I2.png">
                 </a>
                 <div class="alg" id="I2">**I2: **(R U R') U R U' y (R U' R') F'<br>Generacja: sam siebie</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#I2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/I2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#I2')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/I3.png" download>
                     <img src="img/I3.png">
                 </a>
                 <div class="alg" id="I3">**I3: **R U2 R2 U' (R U' R') U2 F R F'<br>Generacja: F R' F' U2 R U R' U R2 U2 R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#I3')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/I3.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#I3')">Kopiuj alga</button>
             </div>
             <div class="photocard col-12 mb-3">
                 <a href="img/I4.png" download>
                     <img src="img/I4.png">
                 </a>
                 <div class="alg" id="I4">**I4: **F (R U R' U') R F' (r U R' U') r'<br>Generacja: r U R U' r' F R' U R U' R' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#I4')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/I4.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#I4')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -297,14 +377,16 @@
                     <img src="img/Y1.png">
                 </a>
                 <div class="alg" id="Y1">**Y1: **(R U R' U') R' F (R2 U R' U') F'<br>Generacja: F U R U' R2 F' R U R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Y1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Y1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Y1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-md-6 col-12 mb-3">
                 <a href="img/Y2.png" download>
                     <img src="img/Y2.png">
                 </a>
                 <div class="alg" id="Y2">**Y2: **(R U R') U (R' F R F') (R U2 R')<br>Generacja: R U2 R' F R' F' R U' R U' R'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#Y2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/Y2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#Y2')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
@@ -317,28 +399,32 @@
                     <img src="img/L1.png">
                 </a>
                 <div class="alg" id="L1">**L1: **F U (R U2 R') U' (R U R') F'<br>Generacja: F R U' R' U R U2 R' U' F'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#L1')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/L1.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#L1')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/L2.png" download>
                     <img src="img/L2.png">
                 </a>
                 <div class="alg" id="L2">**L2: **(R' F R) U (R' F' R) (F U' F')<br>Generacja: F U F' R' F R U' R' F' R</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#L2')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/L2.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#L2')">Kopiuj alga</button>
             </div>
             <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
                 <a href="img/L3.png" download>
                     <img src="img/L3.png">
                 </a>
                 <div class="alg" id="L3">**L3: **(r U r') (R U R' U') (r U' r')<br>Generacja: r U r' U R U' R' r U' r'</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#L3')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/L3.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#L3')">Kopiuj alga</button>
             </div>
             <div class="photocard col-12 mb-3">
                 <a href="img/L4.png" download>
                     <img src="img/L4.png">
                 </a>
                 <div class="alg" id="L4">**L4: **(l' U' l) (L' U' L U) (l' U l)<br>Generacja: l' U' l U' L' U L l' U l</div>
-                <button class="btn-primary rounded" onclick="copyToClipboard('#L4')">Pobierz</button>
+                <button class="btn-primary rounded" onclick="copyImage('img/L4.png')">Kopiuj obraz</button>
+                <button class="btn-primary rounded" onclick="copyToClipboard('#L4')">Kopiuj alga</button>
             </div>
         </div>
         <hr>
