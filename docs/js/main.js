@@ -36,3 +36,21 @@ function darkMode() {
     const element = document.body;
     element.classList.toggle("dark-mode");
 }
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+
+$(document).ready(function () {
+
+    $('[data-toggle="popover"]').popover({
+        placement: 'bottom',
+        delay : {
+            hide : 5000 // doesn't do anything
+        }
+    }).on('shown.bs.popover', function () {
+        setTimeout(function (a) {
+            a.popover('hide');
+        }, 1000, $(this));
+    });
+});

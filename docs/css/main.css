@@ -2,14 +2,14 @@ body
 {
     font-family: 'Recursive', sans-serif;
     font-weight: 600;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     transition: 0.4s ease-in-out;
 }
 
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     transition: 0.4s ease-in-out;
 }
 
@@ -59,10 +59,33 @@ section
 
 hr
 {
-    background-color: red;
+    background-color: #f0ad4e;
 }
 
 button:hover
 {
     cursor: pointer;
+}
+
+.btn-main
+{
+    padding: 30px 70px 30px 70px;
+    transition: .3s ease-in-out;
+}
+
+.btn-main:hover
+{
+    transform: scale(0.9);
+    transition: .3s ease-in-out;
+}
+
+.btn-warning
+{
+    transition: .2s ease-in-out;
+}
+
+.btn-warning:hover
+{
+    transform: scale(0.99);
+    transition: .2s ease-in-out;
 }
