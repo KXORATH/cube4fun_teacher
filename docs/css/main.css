@@ -89,3 +89,16 @@ button:hover
     transform: scale(0.99);
     transition: .2s ease-in-out;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(#F0AD4E, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #292b2c);
+    border-radius: 6px;
+}
