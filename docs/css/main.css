@@ -1,3 +1,8 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     font-family: 'Recursive', sans-serif;
@@ -5,6 +10,7 @@ body
     background-color: black;
     color: white;
     transition: 0.4s ease-in-out;
+    overflow-x: hidden;
 }
 
 .dark-mode {
@@ -66,6 +72,7 @@ section
 hr
 {
     background-color: #f0ad4e;
+    width: 70%;
 }
 
 button:hover
@@ -122,4 +129,23 @@ button:hover
 .doubleturn
 {
     transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 600px){
+    #list-example
+    {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px){
+    #list-example
+    {
+        font-size: 10px;
+    }
+}
+
+#list-example2
+{
+    font-size: smaller;
 }

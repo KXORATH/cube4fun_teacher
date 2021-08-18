@@ -132,7 +132,26 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<main class="container py-3">
+<div class="row">
+    <div id="list-example2" class="list-group col-1-5 position-fixed">
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#standard">Podstawowe</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-t">Przypadki T</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-z">Przypadki Z</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-p">Przypadki P</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-w">Przypadki W</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-c">Przypadki C</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-fish">Ryba</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-square">Kwadrat</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-bolt">Piorun</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-i">Przypadki I</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-y">Przypadki Y</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-l">Przypadki L</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-corners-oriented">Rogi ułożone</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#little-l">Małe L</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-tower">Wieża</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#dot">Kropki</a>
+    </div>
+<main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example2" data-offset="0">
     <section id="standard">
         <h1>Podstawowe: </h1>
         <div class="row">
@@ -686,5 +705,6 @@
         <hr>
     </section>
 </main>
+</div>
 </body>
 </html>
