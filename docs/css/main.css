@@ -11,6 +11,7 @@ body
     color: white;
     transition: 0.4s ease-in-out;
     overflow-x: hidden;
+    position: relative;
 }
 
 .dark-mode {
