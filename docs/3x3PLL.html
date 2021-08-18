@@ -132,6 +132,105 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<main class="container py-3">
+    <section id="case-corner">
+        <h1>Permutacje krawędzi: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLH.svg" download>
+                    <img src="img/PLLH.svg">
+                </a>
+                <div class="alg" id="PLLH">**Permutacja H: **M2 U' M2 U2 M2 U' M2<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLH.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLH')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLUa.svg" download>
+                    <img src="img/PLLUa.svg">
+                </a>
+                <div class="alg" id="PLLUa">**Permutacja U: **(R' U' R U' R' U2 R) F (R U R' U') F'<br>Generacja: F U R U' R' F' R' U2 R U R' U R</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLUa.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLUa')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLUb.svg" download>
+                    <img src="img/PLLUb.svg">
+                </a>
+                <div class="alg" id="PLLUb">**Permutacja U': **F U (R U2 R') U' (R U2 R') U' F'<br>Generacja: F U R U2 R' U R U2 R' U' F'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLUb.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLUb')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-12 mb-3">
+                <a href="img/PLLZ.svg" download>
+                    <img src="img/PLLZ.svg">
+                </a>
+                <div class="alg" id="PLLZ">**Permutacja Z: **M U (R U R' U' R' F R F') M'<br>Generacja: R U' R' F' U F R U R' U R U' R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLZ.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLZ')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="case-triple-bar">
+        <h1>Potrójny bloczek: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLJa.svg" download>
+                    <img src="img/PLLJa.svg">
+                </a>
+                <div class="alg" id="PLLJa">**Permutacja J: **M' U' M U2 M' U' M<br>Generacja: R U R' U' r R' U R U' r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLJa.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLJa')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLJb.svg" download>
+                    <img src="img/PLLJb.svg" class="doubleturn">
+                </a>
+                <div class="alg" id="PLLJb">**Permutacja J': **(R U R' U') r R' (U R U' r')<br>Generacja: r U R' U' R r' U R U' R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLJb.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLJb')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLF.svg" download>
+                    <img src="img/PLLF.svg" class="rightturn">
+                </a>
+                <div class="alg" id="PLLF">**Permutacja F: **M U (R U R' U') M2 U R U' r'<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLF.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLF')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="case-double-bar">
+        <h1>Podwójny bloczek: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLT.svg" download>
+                    <img src="img/PLLT.svg">
+                </a>
+                <div class="alg" id="PLLT">**Permutacja T: **M' U' M U2 M' U' M<br>Generacja: R U R' U' r R' U R U' r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLT.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLT')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLRa.svg" download>
+                    <img src="img/PLLRa.svg">
+                </a>
+                <div class="alg" id="PLLRa">**Permutacja R **(R U R' U') r R' (U R U' r')<br>Generacja: r U R' U' R r' U R U' R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLRa.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLRa')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/PLLRb.svg" download>
+                    <img src="img/PLLRb.svg" class="rightturn">
+                </a>
+                <div class="alg" id="PLLRb">**Permutacja R': **M U (R U R' U') M2 U R U' r'<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PLLRb.svg')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PLLRb')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+</main>
 </body>
 </html>

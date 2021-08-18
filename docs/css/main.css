@@ -34,6 +34,12 @@ h1
    /* border: 3px solid black;  */
 }
 
+.photocard img
+{
+    max-width: 150px;
+    max-height: 150px;
+}
+
 .alg
 {
     font-size: small;
@@ -101,4 +107,19 @@ button:hover
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(transparent, #292b2c);
     border-radius: 6px;
+}
+
+.leftturn
+{
+    transform: rotate(-90deg);
+}
+
+.rightturn
+{
+    transform: rotate(90deg);
+}
+
+.doubleturn
+{
+    transform: rotate(180deg);
 }
