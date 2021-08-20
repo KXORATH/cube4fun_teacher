@@ -15,7 +15,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="index.html">cube4fun</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
                     <a class="dropdown-item" href="2x2EG-2.html">EG-2</a>
                 </div>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar3x3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     3x3
                 </a>
@@ -58,7 +58,7 @@
                     <a class="dropdown-item" href="3x3ZBLLL.html">ZBLL L</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarPyraminx" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pyraminx
                 </a>
@@ -132,6 +132,72 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<div class="row">
+    <div id="list-example" class="list-group col-2 position-fixed">
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-onebar">Pojedynczy bloczek</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-doublebar">Podwójny bloczek</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-4flip">4-flip</a>
+    </div>
+    <main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example" data-offset="0">
+        <section id="case-onebar">
+            <h1>Przypadki T: </h1>
+            <div class="row">
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxPFbloklewa.png" download>
+                        <img src="img/PyraminxPFbloklewa.png">
+                    </a>
+                    <div class="alg" id="PyraminxPFbloklewa">**Bloczek po lewej: **(R U' R') (L' U' L)<br>Generacja: L' U L R U R'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxPFbloklewa.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxPFbloklewa')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxPFblokprawa.png" download>
+                        <img src="img/PyraminxPFblokprawa.png">
+                    </a>
+                    <div class="alg" id="PyraminxPFblokprawa">**Bloczek po prawej: **(L' U L) (R U R')<br>Generacja: R U' R' L' U' L</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxPFblokprawa.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxPFblokprawa')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section id="case-doublebar">
+            <h1>Przypadki T: </h1>
+            <div class="row">
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxPFblokilewa.png" download>
+                        <img src="img/PyraminxPFblokilewa.png">
+                    </a>
+                    <div class="alg" id="PyraminxPFblokilewa">**3 bloczki po lewej: **(R' L R L') U' (R' L R L')<br>Generacja: L R' L' R U L R' L' R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxPFblokilewa.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxPFblokilewa')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxPFblokiprawa.png" download>
+                        <img src="img/PyraminxPFblokiprawa.png">
+                    </a>
+                    <div class="alg" id="PyraminxPFblokiprawa">**3 bloczki po prawej: **(L R' L' R) U (L R' L' R)<br>Generacja: R' L R L' U' R' L R L'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxPFblokiprawa.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxPFblokiprawa')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section id="case-4flip">
+            <h1>Przypadki T: </h1>
+            <div class="row">
+                <div class="photocard col-12 mb-3">
+                    <a href="img/Pyraminx4flip.png" download>
+                        <img src="img/Pyraminx4flip.png">
+                    </a>
+                    <div class="alg" id="Pyraminx4flip">**4-flip: **(U) (L' U L) R U' y (R U' R') L'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/Pyraminx4flip.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#Pyraminx4flip')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </main>
+</div>
 </body>
 </html>
