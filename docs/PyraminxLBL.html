@@ -15,7 +15,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="index.html">cube4fun</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
                     <a class="dropdown-item" href="2x2EG-2.html">EG-2</a>
                 </div>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar3x3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     3x3
                 </a>
@@ -58,7 +58,7 @@
                     <a class="dropdown-item" href="3x3ZBLLL.html">ZBLL L</a>
                 </div>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarPyraminx" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Pyraminx
                 </a>
@@ -132,6 +132,81 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<div class="row">
+    <div id="list-example" class="list-group col-2 position-fixed">
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#first-layer">1 warstwa</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#last-layer">Ostatnia warstwa</a>
+    </div>
+    <main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example" data-offset="0">
+        <section id="first-layer">
+            <h1>1 warstwa: </h1>
+            <div class="row">
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3Esledge.png" download>
+                        <img src="img/PyraminxL3Esledge.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3Esledge">**Sledge: **R' L R L'<br>Generacja: L R' L' R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3Esledge.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3Esledge')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3Ehedge.png" download>
+                        <img src="img/PyraminxL3Ehedge.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3Ehedge">**Hedge: **L R' L' R<br>Generacja: R' L R L'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3Ehedge.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3Ehedge')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section id="last-layer">
+            <h1>Ostatnia warstwa: </h1>
+            <div class="row">
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3ESune.png" download>
+                        <img src="img/PyraminxL3ESune.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3ESune">**Sune: **(R U' R') U' (R U' R')<br>Generacja: L' U L U L' U L</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3ESune.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3ESune')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3EAnti-Sune.png" download>
+                        <img src="img/PyraminxL3EAnti-Sune.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3EAnti-Sune">**Anti-Sune: **(L' U L) U (L' U L)<br>Generacja: R U' R' U' R U' R'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3EAnti-Sune.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3EAnti-Sune')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3E6lewo.png" download>
+                        <img src="img/PyraminxL3E6lewo.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3E6lewo">**6-cio ruchowiec na lewo: **L (U R U' R') L'<br>Generacja: R' U' L' U L R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3E6lewo.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3E6lewo')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-md-6 col-12 mb-3">
+                    <a href="img/PyraminxL3E6prawo.png" download>
+                        <img src="img/PyraminxL3E6prawo.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3E6prawo">**6-cio ruchowiec na prawo: **R' (U' L' U L) R<br>Generacja: L U R U' R' L'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3E6prawo.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3E6prawo')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-12 mb-3">
+                    <a href="img/PyraminxL3E2flip.png" download>
+                        <img src="img/PyraminxL3E2flip.png">
+                    </a>
+                    <div class="alg" id="PyraminxL3E2flip">**2-flip: **(R' L R L') (U L' U' L)<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PyraminxL3E2flip.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PyraminxL3E2flip')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+    </main>
+</div>
 </body>
 </html>
