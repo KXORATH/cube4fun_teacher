@@ -132,6 +132,51 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example2" data-offset="0">
+    <section id="corners">
+        <h1>Narożniki: </h1>
+        <div class="row">
+            <div class="photocard col-md-6 col-12 mb-3">
+                <a href="img/skewb-corner-left.png" download>
+                    <img src="img/skewb-corner-left.png">
+                </a>
+                <div class="alg" id="skewb-corner-left">**Narożnik po lewej: **y' R r' R'<br>Generacja: R r R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/skewb-corner-left.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#skewb-corner-left')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-md-6 col-12 mb-3">
+                <a href="img/skewb-corner-right.png" download>
+                    <img src="img/skewb-corner-right.png">
+                </a>
+                <div class="alg" id="skewb-corner-right">**Narożnik po prawej: **x r' R r<br>Generacja: r' R' r</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/skewb-corner-right.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#skewb-corner-right')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section id="1cat">
+        <h1>1 cat: </h1>
+        <div class="row">
+            <div class="photocard col-md-6 col-12 mb-3">
+                <a href="img/skewb-oll-sledge.png" download>
+                    <img src="img/skewb-oll-sledge.png">
+                </a>
+                <div class="alg" id="skewb-oll-sledge">**Sledge: **y' r' R r R'<br>Generacja: R r' R' r</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/skewb-oll-sledge.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#skewb-oll-sledge')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-md-6 col-12 mb-3">
+                <a href="img/skewb-oll-hedge.png" download>
+                    <img src="img/skewb-oll-hedge.png">
+                </a>
+                <div class="alg" id="skewb-oll-hedge">**Hedge: **y2 R r' R' r<br>Generacja: r' R r R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/skewb-oll-hedge.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#skewb-oll-hedge')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+</main>
 </body>
 </html>
