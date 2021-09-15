@@ -15,7 +15,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="index.html">cube4fun</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar2x2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     2x2
                 </a>
@@ -37,7 +37,7 @@
                     <a class="dropdown-item" href="2x2EG-2.html">EG-2</a>
                 </div>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar3x3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     3x3
                 </a>
@@ -133,6 +133,376 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<div class="row">
+    <div id="list-example" class="list-group col-2 position-fixed">
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-pi">Przypadki Pi</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-h">Przypadki H</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-u">Przypadki U</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-t">Przypadki T</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-l">Przypadki L</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-sune">Przypadki Sune</a>
+        <a class="list-group-item list-group-item-action bg-dark text-white" href="#case-anti-sune">Przypadki Anti-Sune</a>
+    </div>
+    <main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example2" data-offset="0">
+        <section id="case-pi">
+            <h1>Przypadki Pi: </h1>
+            <div class="row">
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi1.png" download>
+                        <img src="img/2x2CLLPi1.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi1">**Pi1: **(R2 U R' U') F R F' R U' R2'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLPi1.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi1')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi2.png" download>
+                        <img src="img/2x2CLLPi2.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi2">**Pi2: **F (R U R' U') (R U R' U') F'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLPi2.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi2')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi3.png" download>
+                        <img src="img/2x2CLLPi3.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi3">**Pi3: **R U' R U' R' U R' F R2 F'<br>Generacja: R' U2 R y R' U R' U' R U' R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLPi3.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi3')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi4.png" download>
+                        <img src="img/2x2CLLPi4.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi4">**Pi4: **(R U' R') F (R' F R) U (R' F R)<br>Generacja: R U R' U R U R' F R' F' R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLPi4.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi4')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi5.png" download>
+                        <img src="img/2x2CLLPi5.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi5">**Pi5: **(R U2 R') U' (R U R') U2 (R' F R F')<br>Generacja: L' U2 L U L' U' L U2 L F' L' F</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLPi5.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi5')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLPi6.png" download>
+                        <img src="img/2x2CLLPi6.png">
+                    </a>
+                    <div class="alg" id="2x2CLLPi6">**Pi6: **(L' U2 L) U (L' U' L) U2 (L F' L' F)<br>Generacja: R U2 R' U' R U R' U2 R' F R F'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLPi6.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLPi6')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section id="case-h">
+            <h1>Przypadki H: </h1>
+            <div class="row">
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLH1.png" download>
+                        <img src="img/2x2CLLH1.png">
+                    </a>
+                    <div class="alg" id="2x2CLLH1">**H1: **R2 U2' R U2 R2'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLH1.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLH1')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLH2.png" download>
+                        <img src="img/2x2CLLH2.png">
+                    </a>
+                    <div class="alg" id="2x2CLLH2">**H2: **x' U2 R U2' R2' F2 R U2'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLH2.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLH2')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLH3.png" download>
+                        <img src="img/2x2CLLH3.png">
+                    </a>
+                    <div class="alg" id="2x2CLLH3">**H3: **(R' U2 R) y R' U R' U' R U' R<br>Generacja: R U' R U' R' U R' F R2 F'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLH3.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLH3')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-12 mb-3">
+                    <a href="img/2x2CLLH4.png" download>
+                        <img src="img/2x2CLLH4.png">
+                    </a>
+                    <div class="alg" id="2x2CLLH4">**H4: **(R U R') U (R U R') (F R' F' R)<br>Generacja: R U' R' F R' F R U R' F R</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLH4.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLH4')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section id="case-u">
+            <h1>Przypadki U: </h1>
+            <div class="row">
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU1.png" download>
+                        <img src="img/2x2CLLU1.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU1">**U1: **F (R U R' U') F'<br>Generacja: F U R U' R' F'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLU1.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU1')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU2.png" download>
+                        <img src="img/2x2CLLU2.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU2">**U2: **R2' F2 (R U R') F U' R U R2<br>Generacja: R' U R' U2 R U2 R' U R2 U' R'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLU2.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU2')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU3.png" download>
+                        <img src="img/2x2CLLU3.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU3">**U3: **x R U' R U' R' U (L' U' L)<br>Generacja: R2 F' R U' R' F2 R F R' F' R2</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLU3.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU3')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU4.png" download>
+                        <img src="img/2x2CLLU4.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU4">**U4: **z' U2 R' U' R2 U' R' U' (R U' R') U'<br>Generacja: sam siebie</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLU4.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU4')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU5.png" download>
+                        <img src="img/2x2CLLU5.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU5">**U5: **(R U2 R') U R' F2 R F' R' F2 R<br>Generacja: R U2 R' U' y' R2 U' R' U R2</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLU5.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU5')">Kopiuj alga</button>
+                </div>
+                <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                    <a href="img/2x2CLLU6.png" download>
+                        <img src="img/2x2CLLU6.png">
+                    </a>
+                    <div class="alg" id="2x2CLLU6">**U6: **R' F2 R U' (R U2' R') F (R U2' R')<br>Generacja: L' U2 L U y' R2 U R U' R2'</div>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLU6.png')">Kopiuj obraz</button>
+                    <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLU6')">Kopiuj alga</button>
+                </div>
+            </div>
+            <hr>
+        </section><section id="case-t">
+        <h1>Przypadki T: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT1.png" download>
+                    <img src="img/2x2CLLT1.png">
+                </a>
+                <div class="alg" id="2x2CLLT1">**T1: **(R U R' U') (R' F R F')<br>Generacja: F R' F' R U R U' R'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLT1.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT1')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT2.png" download>
+                    <img src="img/2x2CLLT2.png">
+                </a>
+                <div class="alg" id="2x2CLLT2">**T2: **L' U' L U L F' L' F<br>Generacja: F' L F L' U' L' U L</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLT2.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT2')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT3.png" download>
+                    <img src="img/2x2CLLT3.png">
+                </a>
+                <div class="alg" id="2x2CLLT3">**T3: **R' U R' U2 R U2 R' U R2 U' R'<br>Generacja: R2' F2 R U R' F U' R U R2</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLT3.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT3')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT4.png" download>
+                    <img src="img/2x2CLLT4.png">
+                </a>
+                <div class="alg" id="2x2CLLT4">**T4: **l' U2 L U (L' U' L U) L' U l<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLT4.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT4')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT5.png" download>
+                    <img src="img/2x2CLLT5.png">
+                </a>
+                <div class="alg" id="2x2CLLT5">**T5: **(r' U r2) (U' r2' U') (r2 U r')<br>Generacja: l U' l2 U l2 U l2 U' l</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLT5.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT5')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLT6.png" download>
+                    <img src="img/2x2CLLT6.png">
+                </a>
+                <div class="alg" id="2x2CLLT6">**T6: **(l U' l2) (U l2 U) (l2 U' l)<br>Generacja: r' U r2 U' r2' U' r2 U r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLT6.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLT6')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section><section id="case-l">
+        <h1>Przypadki L: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL1.png" download>
+                    <img src="img/2x2CLLL1.png">
+                </a>
+                <div class="alg" id="2x2CLLL1">**L1: **F (R U R' U') (R U R' U') F'<br>Generacja: F U R U' R' U R U' R' F'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLL1.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL1')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL2.png" download>
+                    <img src="img/2x2CLLL2.png">
+                </a>
+                <div class="alg" id="2x2CLLL2">**L2: **F' (L' U' L U) (L' U' L U) F<br>Generacja: F' U' L' U L U' L' U L F</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLL2.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL2')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL3.png" download>
+                    <img src="img/2x2CLLL3.png">
+                </a>
+                <div class="alg" id="2x2CLLL3">**L3: **r U2 R' U' (R U R' U') R U' r'<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLL3.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL3')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL4.png" download>
+                    <img src="img/2x2CLLL4.png">
+                </a>
+                <div class="alg" id="2x2CLLL4">**L4: **l' U2 L U (L' U' L U) L' U l<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLL4.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL4')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL5.png" download>
+                    <img src="img/2x2CLLL5.png">
+                </a>
+                <div class="alg" id="2x2CLLL5">**L5: **(r' U r2) (U' r2' U') (r2 U r')<br>Generacja: l U' l2 U l2 U l2 U' l</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLL5.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL5')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLL6.png" download>
+                    <img src="img/2x2CLLL6.png">
+                </a>
+                <div class="alg" id="2x2CLLL6">**L6: **(l U' l2) (U l2 U) (l2 U' l)<br>Generacja: r' U r2 U' r2' U' r2 U r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLL6.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLL6')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section><section id="case-sune">
+        <h1>Przypadki Sune: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS1.png" download>
+                    <img src="img/2x2CLLS1.png">
+                </a>
+                <div class="alg" id="2x2CLLS1">**S1: **F (R U R' U') (R U R' U') F'<br>Generacja: F U R U' R' U R U' R' F'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLS1.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS1')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS2.png" download>
+                    <img src="img/2x2CLLS2.png">
+                </a>
+                <div class="alg" id="2x2CLLS2">**S2: **F' (L' U' L U) (L' U' L U) F<br>Generacja: F' U' L' U L U' L' U L F</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLS2.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS2')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS3.png" download>
+                    <img src="img/2x2CLLS3.png">
+                </a>
+                <div class="alg" id="2x2CLLS3">**S3: **r U2 R' U' (R U R' U') R U' r'<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLS3.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS3')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS4.png" download>
+                    <img src="img/2x2CLLS4.png">
+                </a>
+                <div class="alg" id="2x2CLLS4">**S4: **l' U2 L U (L' U' L U) L' U l<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLS4.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS4')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS5.png" download>
+                    <img src="img/2x2CLLS5.png">
+                </a>
+                <div class="alg" id="2x2CLLS5">**S5: **(r' U r2) (U' r2' U') (r2 U r')<br>Generacja: l U' l2 U l2 U l2 U' l</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLS5.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS5')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLS6.png" download>
+                    <img src="img/2x2CLLS6.png">
+                </a>
+                <div class="alg" id="2x2CLLS6">**S6: **(l U' l2) (U l2 U) (l2 U' l)<br>Generacja: r' U r2 U' r2' U' r2 U r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLS6.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLS6')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section><section id="case-anti-sune">
+        <h1>Przypadki Anti-Sune: </h1>
+        <div class="row">
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA1.png" download>
+                    <img src="img/2x2CLLA1.png">
+                </a>
+                <div class="alg" id="2x2CLLA1">**A1: **F (R U R' U') (R U R' U') F'<br>Generacja: F U R U' R' U R U' R' F'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/2x2CLLA1.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA1')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA2.png" download>
+                    <img src="img/2x2CLLA2.png">
+                </a>
+                <div class="alg" id="2x2CLLA2">**A2: **F' (L' U' L U) (L' U' L U) F<br>Generacja: F' U' L' U L U' L' U L F</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLA2.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA2')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA3.png" download>
+                    <img src="img/2x2CLLA3.png">
+                </a>
+                <div class="alg" id="2x2CLLA3">**A3: **r U2 R' U' (R U R' U') R U' r'<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLA3.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA3')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA4.png" download>
+                    <img src="img/2x2CLLA4.png">
+                </a>
+                <div class="alg" id="2x2CLLA4">**A4: **l' U2 L U (L' U' L U) L' U l<br>Generacja: sam siebie</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLA4.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA4')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA5.png" download>
+                    <img src="img/2x2CLLA5.png">
+                </a>
+                <div class="alg" id="2x2CLLA5">**A5: **(r' U r2) (U' r2' U') (r2 U r')<br>Generacja: l U' l2 U l2 U l2 U' l</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLA5.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA5')">Kopiuj alga</button>
+            </div>
+            <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+                <a href="img/2x2CLLA6.png" download>
+                    <img src="img/2x2CLLA6.png">
+                </a>
+                <div class="alg" id="2x2CLLA6">**A6: **(l U' l2) (U l2 U) (l2 U' l)<br>Generacja: r' U r2 U' r2' U' r2 U r'</div>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/2x2CLLA6.png')">Kopiuj obraz</button>
+                <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#2x2CLLA6')">Kopiuj alga</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    </main>
+</div>
 </body>
 </html>
