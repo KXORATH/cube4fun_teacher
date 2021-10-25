@@ -23,7 +23,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar2x2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     2x2
                 </a>
@@ -37,7 +37,7 @@
                     <a class="dropdown-item" href="2x2EG-2.html">EG-2</a>
                 </div>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbar3x3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     3x3
                 </a>
@@ -133,6 +133,34 @@
         <button class="btn btn-outline-light mx-1" type="button" onclick="darkMode()">Zmień tryb &#128161;</button>
     </div>
 </nav>
-<img src="img/najman.png">
+<section id="standard" class="my-3">
+    <h1>Podstawowe: </h1>
+    <div class="row">
+        <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+            <a href="img/PBL1.png" download>
+                <img src="img/PBL1.png">
+            </a>
+            <div class="alg" id="PBL1">**PBL 1: **y2 R2 U' R2' U2' F2 U' R2<br>Generacja: sam siebie</div>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"  onclick="copyImage('img/PBL1.png')">Kopiuj obraz</button>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PBL1')">Kopiuj alga</button>
+        </div>
+        <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+            <a href="img/PBL2.png" download>
+                <img src="img/PBL2.png">
+            </a>
+            <div class="alg" id="PBL2">**PBL 2: **R' F R' F2 R U' R<br>Generacja: sam siebie</div>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PBL2.png')">Kopiuj obraz</button>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PBL2')">Kopiuj alga</button>
+        </div>
+        <div class="photocard col-lg-4 col-md-6 col-12 mb-3">
+            <a href="img/PBL3.png" download>
+                <img src="img/PBL3.png">
+            </a>
+            <div class="alg" id="PBL3">**PBL 3: **R2' F2 R2<br>Generacja: sam siebie</div>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyImage('img/PBL3.png')">Kopiuj obraz</button>
+            <button class="btn-warning rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Już w schowku"   onclick="copyToClipboard('#PBL3')">Kopiuj alga</button>
+    </div>
+    <hr>
+</section>
 </body>
 </html>
