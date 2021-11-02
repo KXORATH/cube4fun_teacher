@@ -54,3 +54,42 @@ $(document).ready(function () {
         }, 1000, $(this));
     });
 });
+
+function dodajAlga() {
+    var id = document.getElementById('id').value;
+    var name = document.getElementById('name').value;
+    var alg = document.getElementById('alg').value;
+    var gen = document.getElementById('gen').value;
+    if (id === '' && name === '' && alg === '' && gen === '') alert('Uzupełnij wszystkie pola');
+    else {
+        var item = {};
+        item.id = document.getElementById('id').value;
+        item.name = document.getElementById('name').value;
+        item.alg = document.getElementById('alg').value;
+        item.gen = document.getElementById('gen').value;
+        var lista = JSON.parse(localStorage.getItem('lista'));
+        if (lista === null) lista = [];
+        lista.push(item);
+        localStorage.setItem('lista', JSON.stringify(lista));
+    }
+}
+
+function wczytajAlga() {
+    var lista = JSON.parse(localStorage.getItem('lista'));
+    for (i = 0; i < lista.length; i++) {
+        document.getElementById(lista[i].id).innerHTML = "**Permutacja " + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
+    }
+}
+
+function usunAlgi() {
+    if (confirm("Usunąć własne algi?")) {
+        localStorage.removeItem('lista');
+        window.location.reload(true);
+    }
+}
+
+function zmiany(e)
+{
+    const select = e.target;
+    document.getElementById("name").value = select.options[select.selectedIndex].text;
+}

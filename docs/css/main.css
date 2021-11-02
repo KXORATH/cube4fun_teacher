@@ -20,6 +20,18 @@ body
     transition: 0.4s ease-in-out;
 }
 
+.modal-body{
+    background-color: white;
+    color: black;
+}
+
+.modal-header
+{
+    background-color: white;
+    color: black;
+}
+
+
 .cubephotos
 {
     width: 100%;

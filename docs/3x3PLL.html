@@ -12,7 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -143,6 +142,63 @@
     <a class="list-group-item list-group-item-action bg-dark text-white border-0" href="#case-gperms">Permutacje G</a>
 </div>
 <main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example" data-offset="0">
+    <section id="custom" class="py-3">
+        <p>
+            <button class="btn-main btn-warning rounded" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Prześlij swoje algi
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="table-responsive-sm">
+                    <table class="table">
+                        <tr>
+                            <td>Wybierz sytuację:</td>
+                            <td><select id="id" name="" onchange="zmiany(event)">
+                                <option value="PLLH">PLL H</option>
+                                <option value="PLLUa">PLL U</option>
+                                <option value="PLLUb">PLL U'</option>
+                                <option value="PLLJa">PLL J</option>
+                                <option value="PLLJb">PLL J'</option>
+                                <option value="PLLF">PLL F</option>
+                                <option value="PLLT">PLL T</option>
+                                <option value="PLLRa">PLL R</option>
+                                <option value="PLLRb">PLL R'</option>
+                                <option value="PLLAa">PLL A</option>
+                                <option value="PLLAb">PLL A'</option>
+                                <option value="PLLV">PLL V</option>
+                                <option value="PLLY">PLL Y</option>
+                                <option value="PLLE">PLL E</option>
+                                <option value="PLLNa">PLL N</option>
+                                <option value="PLLNb">PLL N'</option>
+                                <option value="PLLGa">PLL G1</option>
+                                <option value="PLLGb">PLL G2</option>
+                                <option value="PLLGc">PLL G1'</option>
+                                <option value="PLLGd">PLL G2'</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Wpisz nazwę permutacji:</td>
+                            <td><input id="name" type="text" value="PLL H"></td>
+                        </tr>
+                        <tr>
+                            <td>Wpisz swojego alga:</td>
+                            <td><input id="alg" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Wpisz generację:</td>
+                            <td><input id="gen" type="text"></td>
+                        </tr>
+                    </table>
+                    </div>
+                    <button type="button" onclick="dodajAlga()" class="btn-warning rounded">Dodaj alga</button>
+                    <button type="button" onclick="wczytajAlga()" class="btn-warning rounded">Wczytaj moje algi</button>
+                    <button type="button" onclick="usunAlgi()" class="btn-warning rounded">Usuń moje algi</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="case-corner">
         <h1>Permutacje krawędzi: </h1>
         <div class="row">
@@ -349,5 +405,6 @@
     </section>
 </main>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
