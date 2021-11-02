@@ -81,6 +81,14 @@ function wczytajAlga() {
     }
 }
 
+function wczytajAlgaOLL() {
+    var lista = JSON.parse(localStorage.getItem('lista'));
+    for (i = 0; i < lista.length; i++) {
+        var text = "**" + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
+        document.getElementById(lista[i].id).innerHTML = text;
+    }
+}
+
 function usunAlgi() {
     if (confirm("Usunąć własne algi?")) {
         localStorage.removeItem('lista');

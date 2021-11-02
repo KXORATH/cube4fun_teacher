@@ -9,10 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -153,6 +149,100 @@
         <a class="list-group-item list-group-item-action bg-dark text-white border-0" href="#dot">Kropki</a>
     </div>
 <main class="container py-3 scrollspy-example col-9" data-spy="scroll" data-target="#list-example2" data-offset="0">
+    <section id="custom" class="py-3">
+        <p>
+            <button class="btn-main btn-warning rounded" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Prześlij swoje algi
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <tr>
+                                <td>Wybierz sytuację:</td>
+                                <td><select id="id" name="" onchange="zmiany(event)">
+                                    <option value="ksztaltH">Kształt H</option>
+                                    <option value="ksztaltPi">Kształt Pi</option>
+                                    <option value="ksztaltSune">Kształt Sune</option>
+                                    <option value="ksztaltAnti-Sune">Kształt Anti-Sune</option>
+                                    <option value="ksztaltT">Kształt T</option>
+                                    <option value="ksztaltL">Kształt L</option>
+                                    <option value="ksztaltU">Kształt U</option>
+                                    <option value="T1">T1</option>
+                                    <option value="T2">T2</option>
+                                    <option value="Z1">Z1</option>
+                                    <option value="Z2">Z2</option>
+                                    <option value="P1">P1</option>
+                                    <option value="P2">P2</option>
+                                    <option value="P3">P3</option>
+                                    <option value="P4">P4</option>
+                                    <option value="W1">W1</option>
+                                    <option value="W2">W2</option>
+                                    <option value="C1">C1</option>
+                                    <option value="C2">C2</option>
+                                    <option value="Ryba1">Ryba1</option>
+                                    <option value="Ryba2">Ryba2</option>
+                                    <option value="Kwadrat1">Kwadrat1</option>
+                                    <option value="Kwadrat2">Kwadrat2</option>
+                                    <option value="Piorun1">Piorun1</option>
+                                    <option value="Piorun2">Piorun2</option>
+                                    <option value="Piorun3">Piorun3</option>
+                                    <option value="Piorun4">Piorun4</option>
+                                    <option value="I1">I1</option>
+                                    <option value="I2">I2</option>
+                                    <option value="I3">I3</option>
+                                    <option value="I4">I4</option>
+                                    <option value="Y1">Y1</option>
+                                    <option value="Y2">Y2</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="L4">L4</option>
+                                    <option value="RU1">RU1</option>
+                                    <option value="RU2">RU2</option>
+                                    <option value="RU3">RU3</option>
+                                    <option value="ML1">Małe L1</option>
+                                    <option value="ML2">Małe L2</option>
+                                    <option value="ML3">Małe L3</option>
+                                    <option value="ML4">Małe L4</option>
+                                    <option value="ML5">Małe L5</option>
+                                    <option value="ML6">Małe L6</option>
+                                    <option value="Wieza1">Wieza1</option>
+                                    <option value="Wieza2">Wieza2</option>
+                                    <option value="Wieza3">Wieza3</option>
+                                    <option value="Wieza4">Wieza4</option>
+                                    <option value="Kropka1">Kropka1</option>
+                                    <option value="Kropka2">Kropka2</option>
+                                    <option value="Kropka3">Kropka3</option>
+                                    <option value="Kropka4">Kropka4</option>
+                                    <option value="Kropka5">Kropka5</option>
+                                    <option value="Kropka6">Kropka6</option>
+                                    <option value="Kropka7">Kropka7</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td>Wpisz nazwę permutacji:</td>
+                                <td><input id="name" type="text" value="Kształt H"></td>
+                            </tr>
+                            <tr>
+                                <td>Wpisz swojego alga:</td>
+                                <td><input id="alg" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>Wpisz generację:</td>
+                                <td><input id="gen" type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" onclick="dodajAlga()" class="btn-warning rounded">Dodaj alga</button>
+                    <button type="button" onclick="wczytajAlgaOLL()" class="btn-warning rounded">Wczytaj moje algi</button>
+                    <button type="button" onclick="usunAlgi()" class="btn-warning rounded">Usuń moje algi</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="standard">
         <h1>Podstawowe: </h1>
         <div class="row">
@@ -707,5 +797,9 @@
     </section>
 </main>
 </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
