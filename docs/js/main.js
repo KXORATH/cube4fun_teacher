@@ -76,16 +76,22 @@ function dodajAlga() {
 
 function wczytajAlga() {
     var lista = JSON.parse(localStorage.getItem('lista'));
-    for (i = 0; i < lista.length; i++) {
-        document.getElementById(lista[i].id).innerHTML = "**Permutacja " + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
+    if (lista === null) alert("Nie podano algów");
+    else {
+        for (i = 0; i < lista.length; i++) {
+            document.getElementById(lista[i].id).innerHTML = "**Permutacja " + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
+        }
     }
 }
 
 function wczytajAlgaOLL() {
     var lista = JSON.parse(localStorage.getItem('lista'));
-    for (i = 0; i < lista.length; i++) {
-        var text = "**" + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
-        document.getElementById(lista[i].id).innerHTML = text;
+    if (lista === null) alert("Nie podano algów");
+    else {
+        for (i = 0; i < lista.length; i++) {
+            var text = "**" + lista[i].name + ": **" + lista[i].alg + "<br>Generacja: " + lista[i].gen;
+            document.getElementById(lista[i].id).innerHTML = text;
+        }
     }
 }
 
