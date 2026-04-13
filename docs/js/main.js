@@ -103,7 +103,7 @@ $(document).ready(function () {
             });
 
             // Insert rotate button immediately before it
-            const rotateBtn = $('<button class="btn-info rounded mr-1" onclick="rotateImage(this)">Obróć ⟳</button>');
+            const rotateBtn = $('<button class="btn-warning rounded" onclick="rotateImage(this)">Obróć ⟳</button>');
             copyImgBtn.before(rotateBtn);
             // Adds small trailing spacing
             copyImgBtn.before(' ');
