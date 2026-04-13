@@ -75,19 +75,54 @@ h1
 
 .photocard
 {
-    width: 30%;
-    /* border: 3px solid black;  */
+    /* Removed width: 30% because it interferes with bootstrap columns while not creating safe margins */
     background-color: white;
     border: 5px solid #5D78A9;
     border-radius: 3rem;
     padding: 10px;
     margin-bottom: 2rem !important;
     margin-top: 1rem;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+/* Adjust Bootstrap flex-basis to account for the 20px horizontal margin */
+@media (max-width: 767.98px) {
+    .photocard.col-12 {
+        flex: 0 0 calc(100% - 20px) !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .photocard.col-md-6 {
+        flex: 0 0 calc(50% - 20px) !important;
+        max-width: calc(50% - 20px) !important;
+    }
+    .photocard.col-12:not(.col-md-6) {
+        flex: 0 0 calc(100% - 20px) !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .photocard.col-lg-4 {
+        flex: 0 0 calc(33.333333% - 20px) !important;
+        max-width: calc(33.333333% - 20px) !important;
+    }
+    .photocard.col-md-6:not(.col-lg-4) {
+        flex: 0 0 calc(50% - 20px) !important;
+        max-width: calc(50% - 20px) !important;
+    }
+    .photocard.col-12:not(.col-md-6):not(.col-lg-4) {
+        flex: 0 0 calc(100% - 20px) !important;
+        max-width: calc(100% - 20px) !important;
+    }
 }
 
 .dark-mode .photocard {
