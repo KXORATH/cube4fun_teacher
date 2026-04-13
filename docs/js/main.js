@@ -7,29 +7,68 @@ function copyToClipboard(element) {
     $temp.remove();
 }
 
-function imageToBlob(imageURL) {
-    const img = new Image;
+function imageToBlob(imageURL, rotation = 0) {
+    const img = new Image();
     const c = document.createElement("canvas");
     const ctx = c.getContext("2d");
-    img.crossOrigin = "";
+    img.crossOrigin = "Anonymous";
     img.src = imageURL;
     return new Promise(resolve => {
         img.onload = function () {
-            c.width = this.naturalWidth;
-            c.height = this.naturalHeight;
-            ctx.drawImage(this, 0, 0);
+            if (rotation === 90 || rotation === 270) {
+                c.width = this.naturalHeight;
+                c.height = this.naturalWidth;
+            } else {
+                c.width = this.naturalWidth;
+                c.height = this.naturalHeight;
+            }
+            if (rotation > 0) {
+                ctx.translate(c.width / 2, c.height / 2);
+                ctx.rotate(rotation * Math.PI / 180);
+                // drawImage offset by half its own original sizing:
+                ctx.drawImage(this, -this.naturalWidth / 2, -this.naturalHeight / 2);
+            } else {
+                ctx.drawImage(this, 0, 0);
+            }
             c.toBlob((blob) => {
-                // here the image is a blob
-                resolve(blob)
-            }, "image/png", 0.75);
+                resolve(blob);
+            }, "image/png", 1.0); // using 1.0 quality instead of 0.75 for crispness
         };
-    })
+    });
 }
 
-async function copyImage(imageURL){
-    const blob = await imageToBlob(imageURL)
+function rotateImage(btn) {
+    const photocard = $(btn).closest('.photocard');
+    const img = photocard.find('img').first();
+    if (!img.length) return;
+    
+    let currentRotation = parseInt(img.attr('data-rotation') || '0');
+    currentRotation = (currentRotation + 90) % 360;
+    img.attr('data-rotation', currentRotation);
+    img.css({
+        'transform': `rotate(${currentRotation}deg)`,
+        'transition': 'transform 0.3s ease'
+    });
+}
+
+async function copyImage(imageURL) {
+    // Attempt to locate the rotation applied locally on the element if we can derive it
+    const imgEl = document.querySelector(`img[src$="${imageURL}"]`);
+    let rotation = 0;
+    if (imgEl && window.lastClickedCopyBtn) {
+        // Find the absolute Photocard that was interacted with to grab proper rotation
+        const photocard = $(window.lastClickedCopyBtn).closest('.photocard');
+        const exactImg = photocard.find('img').first();
+        if (exactImg.length) {
+            rotation = parseInt(exactImg.attr('data-rotation') || '0');
+        }
+    } else if (imgEl) {
+        rotation = parseInt(imgEl.getAttribute('data-rotation') || '0');
+    }
+
+    const blob = await imageToBlob(imageURL, rotation);
     const item = new ClipboardItem({ "image/png": blob });
-    navigator.clipboard.write([item]);
+    navigator.clipboard.write([item]).catch(e => console.error("Clipboard err:", e));
 }
 
 function darkMode() {
@@ -53,6 +92,24 @@ $(document).ready(function () {
             a.popover('hide');
         }, 1000, $(this));
     });
+
+    // Auto-inject Obróć buttons
+    $('.photocard').each(function() {
+        const copyImgBtn = $(this).find("button[onclick^='copyImage']");
+        if (copyImgBtn.length > 0) {
+            // Keep track of which btn was clicked so copyImage can extract its specific photocard rotation
+            copyImgBtn.on('mousedown', function() {
+                window.lastClickedCopyBtn = this;
+            });
+
+            // Insert rotate button immediately before it
+            const rotateBtn = $('<button class="btn-info rounded mr-1" onclick="rotateImage(this)">Obróć ⟳</button>');
+            copyImgBtn.before(rotateBtn);
+            // Adds small trailing spacing
+            copyImgBtn.before(' ');
+        }
+    });
+
 });
 
 function dodajAlga() {
