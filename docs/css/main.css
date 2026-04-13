@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 html
 {
     scroll-behavior: smooth;
@@ -5,31 +8,54 @@ html
 
 body
 {
-    font-family: 'Recursive', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: 600;
-    background-color: black;
-    color: white;
+    background-color: #f9ec4b !important;
+    color: #5D78A9 !important;
     transition: 0.4s ease-in-out;
     overflow-x: hidden;
     position: relative;
 }
 
 .dark-mode {
-    background-color: white;
-    color: black;
+    background-color: #2F3E5E !important; /* Slightly darker blue for actual dark mode body */
+    color: #FEFDE9 !important;
     transition: 0.4s ease-in-out;
 }
 
 .modal-body{
-    background-color: white;
-    color: black;
+    background-color: #FEFDE9;
+    color: #5D78A9;
 }
 
 .modal-header
 {
-    background-color: white;
-    color: black;
+    background-color: #5D78A9;
+    color: #FEFDE9;
 }
+
+/* Nav styles override to mimic cube4fun */
+.bg-dark {
+    background-color: #5D78A9 !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #FEFDE9 !important;
+    font-weight: 700;
+}
+.dropdown-menu.bg-secondary {
+    background-color: #E67E66 !important;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.dropdown-item {
+    color: white !important;
+    font-weight: 600;
+}
+.dropdown-item:hover {
+    background-color: #F8A28E !important;
+}
+
 
 
 .cubephotos
@@ -44,25 +70,49 @@ h1
     margin-left: auto;
     margin-right: auto;
     font-weight: 700;
+    color: black !important;
 }
 
 .photocard
 {
     width: 30%;
-    height: 30%;
-   /* border: 3px solid black;  */
+    /* border: 3px solid black;  */
+    background-color: white;
+    border: 5px solid #5D78A9;
+    border-radius: 3rem;
+    padding: 10px;
+    margin-bottom: 2rem !important;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dark-mode .photocard {
+    background-color: #4b628c;
+    border-color: #FEFDE9;
+    color: #FEFDE9;
 }
 
 .photocard img
 {
     max-width: 150px;
     max-height: 150px;
+    margin-top: 1rem;
 }
 
 .alg
 {
     font-size: small;
     padding: 5px;
+    color: black !important;
+}
+
+table td
+{
+    color: black !important;
 }
 
 section
@@ -84,9 +134,10 @@ section
 
 hr
 {
-    background-color: #f0ad4e;
+    background-color: #E67E66;
     width: 70%;
 }
+
 
 button:hover
 {
@@ -95,7 +146,19 @@ button:hover
 
 .btn-main
 {
-    padding: 30px 70px 30px 70px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Poppins', sans-serif !important;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 70px !important;
+    background-color: rgb(238, 116, 92) !important;
+    border: none !important;
+    border-radius: 25px !important;
+    opacity: 1;
     transition: .3s ease-in-out;
 }
 
@@ -103,29 +166,46 @@ button:hover
 {
     transform: scale(0.9);
     transition: .3s ease-in-out;
+    background-color: #F8A28E !important;
 }
 
 .btn-warning
 {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Poppins', sans-serif !important;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 24px !important;
+    background-color: rgb(238, 116, 92) !important;
+    border: none !important;
+    border-radius: 25px !important;
+    opacity: 1;
     transition: .2s ease-in-out;
+    margin-bottom: 5px;
 }
 
 .btn-warning:hover
 {
     transform: scale(0.99);
     transition: .2s ease-in-out;
+    background-color: #F8A28E !important;
 }
+
 
 ::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: linear-gradient(#F0AD4E, transparent);
+    background: linear-gradient(#E67E66, transparent);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #292b2c);
+    background: linear-gradient(transparent, #5D78A9);
     border-radius: 6px;
 }
 
